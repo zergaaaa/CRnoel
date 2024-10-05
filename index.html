@@ -21,6 +21,7 @@
             font-family: 'Mountains of Christmas', cursive;
             color: white;
             overflow: hidden;
+            position: relative;
         }
 
         .countdown-container {
@@ -31,6 +32,7 @@
             background: rgba(0, 0, 0, 0.5); /* Ajoute un fond transparent pour rendre le texte lisible */
             padding: 30px;
             border-radius: 15px;
+            z-index: 2;
         }
 
         .countdown {
@@ -95,14 +97,16 @@
             }
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        /* Image du Père Noël */
+        .santa {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            width: 250px;
+            height: auto;
+            z-index: 1;
         }
+
     </style>
 </head>
 <body>
@@ -127,6 +131,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Image du Père Noël -->
+    <img src="https://www.pngplay.com/wp-content/uploads/12/Santa-Claus-No-Background.png" alt="Père Noël" class="santa">
 
     <!-- Animation des flocons de neige -->
     <div class="snowflake" style="left: 10%;">❄️</div>
